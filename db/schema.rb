@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150915220057) do
+ActiveRecord::Schema.define(version: 20150915222421) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "events", force: :cascade do |t|
+    t.string   "occurs_at"
+    t.string   "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "movies", force: :cascade do |t|
     t.string   "title"
@@ -25,6 +32,8 @@ ActiveRecord::Schema.define(version: 20150915220057) do
 
   create_table "votes", force: :cascade do |t|
     t.string   "name"
+    t.string   "movie"
+    t.string   "event"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

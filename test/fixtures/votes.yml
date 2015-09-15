@@ -2,6 +2,10 @@
 
 one:
   name: MyString
+  movie: MyString
+  event: MyString
 
 two:
   name: MyString
+  movie: MyString
+  event: MyString

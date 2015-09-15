@@ -1,3 +1,5 @@
 class Vote < ActiveRecord::Base
-  validates :name, presence: true
+  validates :name, :event, :movie, presence: true
+
+  
 end
