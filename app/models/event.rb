@@ -1,4 +1,6 @@
 class Event < ActiveRecord::Base
+  has_many :movies
+  
   validates :location, :occurs_at, presence: true
 
   validates :location, uniqueness: { 
