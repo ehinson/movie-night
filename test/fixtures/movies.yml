@@ -1,9 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  url: MyString
+alien:
+  title: "Alien"
+  url: "http://www.imdb.com/title/tt0078748/"
+  event: january
 
-two:
-  title: MyString
-  url: MyString
+lebowski:
+  title: "The Big Lebowski"
+  url: "http://www.imdb.com/title/tt0118715/"
+  event: january
+
+tron:
+  title: "Tron: Legacy"
+  url: "http://www.imdb.com/title/tt0084827/"
+  event: january

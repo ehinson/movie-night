@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class EventTest < ActiveSupport::TestCase
+  def setup
+    @event = events(:january)
+  end
+
   should validate_presence_of(:location)
   should validate_presence_of(:occurs_at)
 

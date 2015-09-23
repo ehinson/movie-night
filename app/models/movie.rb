@@ -10,4 +10,6 @@ class Movie < ActiveRecord::Base
     case_sensitive: false 
   }
 
+  validates :event, presence: true
+
 end

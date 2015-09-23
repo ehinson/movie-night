@@ -5,14 +5,31 @@ class MovieTest < ActiveSupport::TestCase
   #   assert true
   # end
 
+  def setup
+    @movie = movies(:lebowski)
+  end
+
+  test 'has a valid fixture' do
+    assert @movie.valid?
+  end
+
   should validate_presence_of(:title)
   
   should validate_presence_of(:url)
 
-   should validate_uniqueness_of(:title).
+  should validate_uniqueness_of(:title).
     scoped_to(:event_id).
     with_message('Someone already suggested that').
     case_insensitive
+
+  should have_many(:votes)
+
+  should belong_to(:event)
+
+  should validate_presence_of(:event)
+
+
+
 
   
   test 'requires a title' do
