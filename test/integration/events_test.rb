@@ -20,3 +20,4 @@ class EventsTest < ActionDispatch::IntegrationTest
     assert page.has_content?(february.occurs_at)
   end
 end
+
